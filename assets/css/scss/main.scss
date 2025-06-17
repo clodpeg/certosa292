@@ -7,7 +7,7 @@
     .row{
         align-items:center;
     }
-    .col.back{
+    .col.language{
         text-align:right;
     }
 }
@@ -75,7 +75,7 @@ main{
                 bottom: 11%;
                 // transform:translateY(-50%);
                 font-size:18px;
-                line-height: 1;
+                line-height: 1.1;
                 padding:0 17px;
             }
             &:before{
@@ -109,7 +109,7 @@ main{
     }
 }
 
-.modal{
+.modal-content{
     background-color:#edece9;
 }
 
@@ -130,14 +130,75 @@ main{
     font-size:23px;
 }
 
+.language-selector {
+    position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+  }
+
+  .selector-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 2px solid #0052cc;
+    border-radius: 999px;
+    background-color: white;
+    color: #0052cc;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .selector-button img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .selector-button svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    min-width: 160px;
+    z-index: 100;
+
+    img{
+        width:28px;
+    }
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+
 @media screen and (max-width:600px){
     .nav{
         padding: 0 10px;
         .row{
-            justify-content: center;
+            // justify-content: center;
 
             .col{
-                flex: 0 0 0;
+                flex: 1 0 0;
             }
         }
     }

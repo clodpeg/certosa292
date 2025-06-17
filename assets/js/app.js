@@ -8,12 +8,14 @@ const Certosa292 = {
     modalDove: null,
     modalComeMuoversi: null,
     modalFood: null,
+    modalCity: null,
     modalEmergency: null,
 
     init: function(){
         this.Modals();
         this.Menu();
         this.Hash();
+        this.Language();
     },
 
     Modals: () => {
@@ -28,8 +30,7 @@ const Certosa292 = {
         Certosa292.modalComeMuoversi = new bootstrap.Modal('#modal-come-muoversi');
         Certosa292.modalFood = new bootstrap.Modal('#modal-food');
         Certosa292.modalEmergency = new bootstrap.Modal('#modal-emergency');
-
-
+        Certosa292.modalCity = new bootstrap.Modal('#modal-city');
         
         const modals = document.querySelectorAll('.modal');
 
@@ -46,7 +47,10 @@ const Certosa292 = {
             })
         });
 
+
     },
+
+
 
     Menu: () => {
         $('#menu a').on('click', function(){
@@ -89,6 +93,10 @@ const Certosa292 = {
                     Certosa292.modalEmergency.show();
                 break;
 
+                case 'menu-city':
+                    Certosa292.modalCity.show();
+                break;
+
             }
 
             history.replaceState(null, '', window.location.pathname + window.location.search + '#' + $(this).attr('id').replace('menu-', ''));
@@ -106,6 +114,32 @@ const Certosa292 = {
             }
 
         }
+    },
+
+    Language: () => {
+
+
+        $('.selector-button').on('click', function(){
+            document.getElementById("languageDropdown").style.display = document.getElementById("languageDropdown").style.display === "block" ? "none" : "block";
+        });
+
+        $('.dropdown-item').on('click', function(){
+            const lang = $(this).data('lang');
+            document.getElementById("languageDropdown").style.display = "none";
+
+            document.location = '../' + lang;
+            
+        });
+
+        document.addEventListener("click", function(e) {
+            const dropdown = document.getElementById("languageDropdown");
+            const button = document.querySelector(".selector-button");
+            if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+              dropdown.style.display = "none";
+            }
+        });
+
+
     }
 
 }
