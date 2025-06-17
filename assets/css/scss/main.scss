@@ -225,6 +225,26 @@ main{
     color: white;
   }
 
+  img.zoomable {
+    cursor: zoom-in;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Quando l'immagine è in fullscreen */
+  img:-webkit-full-screen {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  img:fullscreen {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
 @media screen and (max-width:600px){
     .nav{
         padding: 0 10px;
