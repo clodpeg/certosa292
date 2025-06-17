@@ -96,6 +96,12 @@ main{
         }
     }
 }
+.accordion-button:not(.collapsed){
+    background-color:#EDECE9;
+}
+.accordion-button:focus{
+    box-shadow:none;
+}
 
 .accordion{
     iframe{
