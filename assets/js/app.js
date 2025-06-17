@@ -16,6 +16,7 @@ const Certosa292 = {
         this.Menu();
         this.Hash();
         this.Language();
+        this.Zoom();
     },
 
     Modals: () => {
@@ -139,7 +140,79 @@ const Certosa292 = {
             }
         });
 
+    },
 
+    Zoom: () => {
+        const img = document.getElementById('zoomImage');
+        let scale = 1, startX = 0, startY = 0, panX = 0, panY = 0, isDragging = false;
+
+        img.addEventListener('wheel', e => {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.1 : 0.1;
+            scale = Math.min(Math.max(1, scale + delta), 3);
+            updateTransform();
+        });
+
+        img.addEventListener('touchstart', e => {
+            if (e.touches.length === 2) {
+            e.preventDefault();
+            pinchStart(e);
+            } else if (e.touches.length === 1) {
+            isDragging = true;
+            startX = e.touches[0].clientX - panX;
+            startY = e.touches[0].clientY - panY;
+            }
+        });
+
+        img.addEventListener('touchmove', e => {
+            if (e.touches.length === 1 && isDragging) {
+            panX = e.touches[0].clientX - startX;
+            panY = e.touches[0].clientY - startY;
+            updateTransform();
+            } else if (e.touches.length === 2) {
+            pinchMove(e);
+            }
+        });
+
+        img.addEventListener('touchend', e => {
+            if (e.touches.length === 0) isDragging = false;
+        });
+
+        let initialDistance = 0;
+        let initialScale = 1;
+
+        function pinchStart(e) {
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            initialDistance = Math.sqrt(dx * dx + dy * dy);
+            initialScale = scale;
+        }
+
+        function pinchMove(e) {
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            const newDistance = Math.sqrt(dx * dx + dy * dy);
+            const pinchScale = newDistance / initialDistance;
+            scale = Math.min(Math.max(1, initialScale * pinchScale), 3);
+            updateTransform();
+        }
+
+        function updateTransform() {
+            img.style.transform = `scale(${scale}) translate(${panX / scale}px, ${panY / scale}px)`;
+        }
+
+        // Doppio tap per zoom in
+        let lastTap = 0;
+        img.addEventListener('touchend', function (e) {
+            const now = new Date().getTime();
+            if (now - lastTap < 300) {
+            scale = scale === 1 ? 2 : 1;
+            panX = 0;
+            panY = 0;
+            updateTransform();
+            }
+            lastTap = now;
+        });
     }
 
 }
