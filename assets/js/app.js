@@ -144,16 +144,15 @@ const Certosa292 = {
 
     Zoom: () => {
         
-        const image = document.getElementById('img-parking');
+        const thumb = document.getElementById('thumbnail');
+        const overlay = document.getElementById('overlay');
 
-        image.addEventListener('click', () => {
-          if (document.fullscreenElement || document.webkitFullscreenElement) {
-            // Esci dal fullscreen se è già attivo
-            document.exitFullscreen?.() || document.webkitExitFullscreen?.();
-          } else {
-            // Entra in fullscreen
-            image.requestFullscreen?.() || image.webkitRequestFullscreen?.();
-          }
+        thumb.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('active');
         });
 
     }
