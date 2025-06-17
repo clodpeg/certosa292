@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+    <link href="../assets/css/main.css?v=1.4" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <title>Benvenuti nel B&B Certosa 292, Milano</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col logo"><img id="logo" src="../assets/img/logo-292.png" alt="Certosa 292"></div>
+                <div class="col language">
+                    <div class="language-selector">
+                        <div class="selector-button">
+                          <img src="https://flagcdn.com/w80/gb.png" alt="EN">
+                          <span>English</span>
+                          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.188l3.71-3.96a.75.75 0 011.08 1.04l-4.25 4.54a.75.75 0 01-1.08 0l-4.25-4.54a.75.75 0 01.02-1.06z"/></svg>
+                        </div>
+                        <div class="dropdown" id="languageDropdown">
+                          <div data-lang="ita" class="dropdown-item">
+                            <img src="https://flagcdn.com/w80/it.png" alt="IT">
+                            <span>Italiano</span>
+                          </div>
+                          <div data-lang="eng" class="dropdown-item">
+                            <img src="https://flagcdn.com/w80/gb.png" alt="EN">
+                            <span>English</span>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header></header>
+    <main>
+        <div class="container">
+            <ul id="menu">
+                <li>
+                    <a id="menu-parking" href="javascript:;">
+                        <span>PARKING</span>
+                        <img src="../assets/img/menu/menu-parking.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-checkin" href="javascript:;">
+                        <span>Check-in</span>
+                        <img src="../assets/img/menu/menu-checkin.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-wifi" href="javascript:;">
+                        <span>Wi-fi</span>
+                        <img src="../assets/img/menu/menu-wifi.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-rules" href="javascript:;">
+                        <span>HOUSE'S RULES</span>
+                        <img src="../assets/img/menu/menu-rules.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-guide" href="javascript:;">
+                        <span>Guide pratiche</span>
+                        <img src="../assets/img/menu/menu-guide.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-dove-lo-trovo" href="javascript:;">
+                        <span>Dove lo trovo?</span>
+                        <img src="../assets/img/menu/menu-dove-lo-trovo.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-come-muoversi" href="javascript:;">
+                        <span>Come muoversi</span>
+                        <img src="../assets/img/menu/menu-come-muoversi.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-food" href="javascript:;">
+                        <span>Dove mangiare in zona</span>
+                        <img src="../assets/img/menu/menu-food.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-city" href="javascript:;">
+                        <span>Cosa fare in città</span>
+                        <img src="../assets/img/menu/menu-city.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a id="menu-emergency" href="javascript:;">
+                        <span>Numeri emergenza</span>
+                        <img src="../assets/img/menu/menu-emergency.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+    <!-- parking-->
+    <div class="modal fade" id="modal-parking" tabindex="-1" aria-labelledby="Parking" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalParkingLabel">Dove parcheggiare</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <strong>🚗 Non è disponibile un parcheggio privato, ma potrai trovare facilmente parcheggi gratuiti su strada nelle vie vicine.</strong>
+                </p>
+                <p>
+                    Puoi parcheggiare davanti a casa o nelle vie adiacenti, facendo attenzione a queste regole:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Mercoledì</strong> - Via Pareto.<br>
+                        Mercato rionale → Divieto di sosta dalle 06:00 alle 17:00
+                    </li>
+                    <li>
+                        <strong>Lunedì notte</strong> - Viale Certosa (civici 290–292–294)<br>
+                        Lavaggio strade → Divieto di sosta dalle 00:00 alle 06:00 (nella notte tra lunedì e martedì)
+                    </li>
+                </ul>
+
+                <div class="zoom-container" id="zoomContainer">
+                    <img id="thumbnail" src="../assets/img/photos/Certosa_parcheggio_mezzi-2.jpg" alt="" class="img-fluid zoomable-img">
+                    <div class="zoom-icon">
+                      <!-- Icona lente d'ingrandimento -->
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                           viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                      </svg>
+                    </div>
+                </div>
+
+                <div class="overlay" id="overlay">
+                    <img id="zoomedImage" src="../assets/img/photos/Certosa_parcheggio_mezzi-2.jpg" alt="">
+                </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- check-in-->
+    <div class="modal fade" id="modal-checkin" tabindex="-1" aria-labelledby="Check-in" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalParkingLabel">Check-in</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                
+                <iframe width="560" height="200" src="https://www.youtube.com/embed/pVbmu4zc91A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>
+                    Premere il <strong>tasto rosso</strong> all'interno del cancelletto
+                </p>
+                <p>
+                    <img class="img-fluid" src="../assets/img/photos/apertura-cancelletto.jpg" alt="">
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- wi-fi-->
+    <div class="modal fade" id="modal-wifi" tabindex="-1" aria-labelledby="WI-fi" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalParkingLabel">Wi-fi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <div class="bigtext">
+                    <strong>SSID:</strong> Certosa292<br>
+                    <strong>Password:</strong> BLsVG7L9JcSPjvv
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- rules-->
+    <div class="modal fade" id="modal-rules" tabindex="-1" aria-labelledby="Rules" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalParkingLabel">Regole della casa</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Spegnere il condizionatore prima del check-out</li>
+                    <li>asasd asdasd</li>
+                    <li>asasd asdasd</li>
+                    <li>asasd asdasd</li>
+                    <li>asasd asdasd</li>
+                    <li>asasd asdasd</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- guide -->
+    <div class="modal fade" id="modal-guide" tabindex="-1" aria-labelledby="Rules" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalParkingLabel">Guide pratiche</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Piano induzione
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <iframe width="560" height="200" src="https://www.youtube.com/embed/00xd0zKBKTs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Condizionatore / Riscaldamento
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <iframe width="560" height="200" src="https://www.youtube.com/embed/ly3hCAk9u5E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          Ripristinare l'elettricità
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <iframe width="560" height="200" src="https://www.youtube.com/embed/LemHguS-Vpk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- start item -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                            Ripristinare modem wi-fi
+                          </button>
+                        </h2>
+                        <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <iframe width="560" height="200" src="https://www.youtube.com/embed/bvb8k_XjM18" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div><!-- end item -->
+                      <!-- start item -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                            Buttare la spazzatura
+                          </button>
+                        </h2>
+                        <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <iframe width="560" height="200" src="https://www.youtube.com/embed/KrjTnIoC7zo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div><!-- end item -->
+                      <!-- start item -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                            Scalda salviette elettrico
+                          </button>
+                        </h2>
+                        <div id="flush-collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p>Lo scalda salviette elettrico si attiva premendo il tasto sotto il pannello di controllo</p>
+                            <img src="../assets/img/photos/scaldasalviette.jpg" alt="" class="img-fluid">
+                          </div>
+                        </div>
+                      </div><!-- end item -->
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dove lo trovo-->
+    <div class="modal fade" id="modal-dove-lo-trovo" tabindex="-1" aria-labelledby="Dove lo trovo?" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDoveLabel">Dove lo trovo?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!-- start item -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cassetto-posate" aria-expanded="false" aria-controls="cassetto-posate">
+                            Cassetto delle posate
+                        </button>
+                      </h2>
+                      <div id="cassetto-posate" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                                Il cassetto delle posate si trova nel cassetto sotto il piano ad induzione
+                            </p>
+                            <iframe width="560" height="200" src="https://www.youtube.com/embed/0W4hF2gKWHQ?si=8e7v8kJuD18g38OU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div><!-- end item -->
+                    <!-- start item -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chiavi-cancello" aria-expanded="false" aria-controls="chiavi-cancello">
+                              Chiavi del cancello
+                          </button>
+                        </h2>
+                        <div id="chiavi-cancello" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                              <p>
+                                Le chiavi del cancello del palazzo principale si trovano nel primo cassetto del mobile cilindrico grigio all'ingresso
+                              </p>
+                              <img class="img-fluid" src="../assets/img/photos/chiavi-cancello.jpg" alt="">
+                          </div>
+                        </div>
+                      </div><!-- end item -->
+                      <!-- start item -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#microonde" aria-expanded="false" aria-controls="microonde">
+                              Microonde
+                          </button>
+                        </h2>
+                        <div id="microonde" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                              <p>
+                                Il microonde si trova nel mobile della cucina sopra al forno
+                              </p>
+                              <img class="img-fluid" src="../assets/img/photos/microonde.jpg" alt="">
+                          </div>
+                        </div>
+                      </div><!-- end item -->
+                 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- come muoversi-->
+    <div class="modal fade" id="modal-come-muoversi" tabindex="-1" aria-labelledby="Come muoversi" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDoveLabel">Come muoversi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <div class="block">
+                    <h2>🚋 Mezzi pubblici ATM</h2>
+                    <p>
+                        <strong>🚊 TRAM 14 – Direzione Centro Città</strong><br>
+                        Proprio di fronte a casa, su <strong>Viale Certosa</strong>, trovi il <strong>tram 14</strong>, che porta direttamente nel cuore di Milano.<br>
+                        Lungo il percorso puoi visitare tutte le zone più iconiche:<br>
+                        <strong>Chinatown, Moscova, Porta Garibaldi, Corso Como, Gae Aulenti, Parco Sempione, Brera, Castello Sforzesco, Piazza Duomo, San Babila, fino ai vivaci Navigli.</strong>
+                    </p>
+
+                    <p>
+                        <strong>🚌 AUTOBUS 40 – Collegamenti strategici</strong><br>
+                        A pochi passi, su <strong>Via Pareto</strong>, il <strong>bus 40</strong> ti porta verso:
+                        <ul>
+                            <li><strong>Stazione Milano Certosa e Certosa District</strong></li>
+                            <li><strong>Ippodromo Snai La Maura</strong></li>
+                            <li><strong>Fermata Metro M1 Uruguay</strong>, che attraversa tutta la città:<br>
+                                <i>Rho Fiera – Fiera MilanoCity – Cadorna – Duomo – Porta Venezia – Corso Buenos Aires – NoLo</i>
+                            </li>
+                        </ul>
+                    </p>
+                
+                    <p>
+                        <strong>🚇 METRO M1 – Fermata Uruguay</strong><br>
+                        La fermata <strong>Uruguay (Linea Rossa M1)</strong> è facilmente raggiungibile in pochi minuti con l'autobus o in auto.<br>
+                        Ti collega velocemente ai principali punti d’interesse della città.
+                    </p>
+    
+                    <p>
+                        <strong>📱 Consiglio utile:</strong><br>
+                        Scarica l'app ufficiale <strong>ATM Milano</strong> per consultare orari, percorsi e pianificare i tuoi spostamenti con i mezzi pubblici.
+                    </p>
+                </div>
+
+                <div class="block">
+                    <h2>🚖 TAXI</h2>
+                    <p>
+                        📞 <strong>+39 02 6969</strong> → App: <strong>ItTaxi</strong><br>
+                        📞 <strong>+39 02 8585</strong> → App: <strong>InTaxi</strong>
+                    </p>
+                </div>
+
+                <div class="block">
+                    <h2>🚲🛴 Mobilità in sharing</h2>
+                    <p>
+                        In alternativa, puoi muoverti facilmente con monopattini elettrici e biciclette in sharing.<br>
+                        Le principali app disponibili a Milano sono:<br>
+                        <strong>BikeMi, Dott, Bolt, Lime, Voi</strong>
+                    </p>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- food-->
+    <div class="modal fade" id="modal-food" tabindex="-1" aria-labelledby="Dove mangiare in zona" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDoveLabel">Dove mangiare in zona</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <h2>ssssss</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- city-->
+    <div class="modal fade" id="modal-city" tabindex="-1" aria-labelledby="Cosa fare in città" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCityLabel">Cosa fare in città</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <h2>ssssss</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- emergency-->
+    <div class="modal fade" id="modal-emergency" tabindex="-1" aria-labelledby="Emergenza" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEmergencyLabel">Emergenza</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    
+                </p>
+                <p>
+                    📞 <strong>112</strong> Emergenza (valido per Polizia, Carabinieri, Ambulanza, Vigili del Fuoco)
+                </p>
+                <p>
+                    <strong>📍 Indirizzo dell’alloggio:</strong><br>Viale Certosa 292, Milano
+                </p>
+                <p>
+                    <strong>🏥 Assistenza medica privata 24/7</strong><br>
+                    Pronto Medico – Guardia medica privata<br>+39 351 525 3473 (anche via WhatsApp)
+                </p>
+                <p>
+                    <strong>💊 Farmacia più vicina</strong><br>
+                    Farmacia Laghi – Viale Certosa 282<br>
+                    A soli 100 metri da casa
+                </p>
+                <p>
+                    <strong>🏥 Ospedali vicini:</strong><br>
+                    IRCCS Ospedale Galeazzi – 3 km<br>
+                    Istituto Clinico San Siro – 4 km
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/app.js?v=1.0"></script>
+</body>
+</html>
