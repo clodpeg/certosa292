@@ -109,6 +109,27 @@ main{
     }
 }
 
+.modal{
+    background-color:#edece9;
+}
+
+.modal-body{
+    iframe{
+        max-width:100%;
+    }
+}
+
+.modal-body{
+    padding:1.5rem;
+    ul{
+        padding-left:1rem;
+    }
+}
+
+.bigtext{
+    font-size:23px;
+}
+
 @media screen and (max-width:600px){
     .nav{
         padding: 0 10px;
