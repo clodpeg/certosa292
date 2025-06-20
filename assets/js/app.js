@@ -22,16 +22,16 @@ const Certosa292 = {
     Modals: () => {
         
         // modal parking
-        Certosa292.modalParking = new bootstrap.Modal('#modal-parking');
-        Certosa292.modalCheckin = new bootstrap.Modal('#modal-checkin');
-        Certosa292.modalWifi = new bootstrap.Modal('#modal-wifi');
-        Certosa292.modalRules = new bootstrap.Modal('#modal-rules');
-        Certosa292.modalGuide = new bootstrap.Modal('#modal-guide');
-        Certosa292.modalDove = new bootstrap.Modal('#modal-dove');
-        Certosa292.modalMuoversi = new bootstrap.Modal('#modal-muoversi');
-        Certosa292.modalFood = new bootstrap.Modal('#modal-food');
-        Certosa292.modalEmergency = new bootstrap.Modal('#modal-emergency');
-        Certosa292.modalCity = new bootstrap.Modal('#modal-city');
+        if( $('#modal-parking').length ) Certosa292.modalParking = new bootstrap.Modal('#modal-parking');
+        if( $('#modal-checkin').length ) Certosa292.modalCheckin = new bootstrap.Modal('#modal-checkin');
+        if( $('#modal-wifi').length ) Certosa292.modalWifi = new bootstrap.Modal('#modal-wifi');
+        if( $('#modal-rules').length ) Certosa292.modalRules = new bootstrap.Modal('#modal-rules');
+        if( $('#modal-guide').length ) Certosa292.modalGuide = new bootstrap.Modal('#modal-guide');
+        if( $('#modal-dove').length ) Certosa292.modalDove = new bootstrap.Modal('#modal-dove');
+        if( $('#modal-muoversi').length ) Certosa292.modalMuoversi = new bootstrap.Modal('#modal-muoversi');
+        if( $('#modal-food').length ) Certosa292.modalFood = new bootstrap.Modal('#modal-food');
+        if( $('#modal-emergency').length ) Certosa292.modalEmergency = new bootstrap.Modal('#modal-emergency');
+        if( $('#modal-city').length ) Certosa292.modalCity = new bootstrap.Modal('#modal-city');
         
         const modals = document.querySelectorAll('.modal');
 
@@ -143,17 +143,19 @@ const Certosa292 = {
     },
 
     Zoom: () => {
-        
+
         const thumb = document.getElementById('thumbnail');
         const overlay = document.getElementById('overlay');
-
-        thumb.addEventListener('click', () => {
-            overlay.classList.add('active');
-        });
-
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
+        
+        if ( $('.thumbnail').length ){
+            thumb.addEventListener('click', () => {
+                overlay.classList.add('active');
+            });
+    
+            overlay.addEventListener('click', () => {
+                overlay.classList.remove('active');
+            });
+        }
 
     }
 

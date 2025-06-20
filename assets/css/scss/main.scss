@@ -2,6 +2,33 @@
     box-sizing: border-box;
     // font-family: "Huninn", sans-serif;
 }
+html.language-redirect,
+html.language-redirect body
+{
+    background-color:#EDECE9;
+    height:100%;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+html.language-redirect body{
+    display:flex;
+}
+#language-redirect{
+    width:100%;
+    margin:auto;
+    text-align:center;
+    #biglogo{
+        margin:auto;
+        width:200px;
+        img{
+            width:100%;
+        }
+    }
+    p{
+        
+    }
+}
 body{
     font-size:1.1rem;
 }
