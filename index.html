@@ -21,6 +21,8 @@
 
         if (redirects[langCode] && !window.location.pathname.startsWith(`/${langCode}/`)) {
             window.location.href = redirects[langCode];
+        }else{
+            window.location.href = 'eng';
         }
         })();
     </script>
