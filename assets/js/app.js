@@ -6,7 +6,7 @@ const Certosa292 = {
     modalRules: null,
     modalGuide: null,
     modalDove: null,
-    modalComeMuoversi: null,
+    modalMuoversi: null,
     modalFood: null,
     modalCity: null,
     modalEmergency: null,
@@ -27,8 +27,8 @@ const Certosa292 = {
         Certosa292.modalWifi = new bootstrap.Modal('#modal-wifi');
         Certosa292.modalRules = new bootstrap.Modal('#modal-rules');
         Certosa292.modalGuide = new bootstrap.Modal('#modal-guide');
-        Certosa292.modalDove = new bootstrap.Modal('#modal-dove-lo-trovo');
-        Certosa292.modalComeMuoversi = new bootstrap.Modal('#modal-come-muoversi');
+        Certosa292.modalDove = new bootstrap.Modal('#modal-dove');
+        Certosa292.modalMuoversi = new bootstrap.Modal('#modal-muoversi');
         Certosa292.modalFood = new bootstrap.Modal('#modal-food');
         Certosa292.modalEmergency = new bootstrap.Modal('#modal-emergency');
         Certosa292.modalCity = new bootstrap.Modal('#modal-city');
@@ -78,12 +78,12 @@ const Certosa292 = {
                     Certosa292.modalGuide.show();
                 break;
 
-                case 'menu-dove-lo-trovo':
+                case 'menu-dove':
                     Certosa292.modalDove.show();
                 break;
 
-                case 'menu-come-muoversi':
-                    Certosa292.modalComeMuoversi.show();
+                case 'menu-muoversi':
+                    Certosa292.modalMuoversi.show();
                 break;
 
                 case 'menu-food':
@@ -109,7 +109,7 @@ const Certosa292 = {
             let hash = window.location.hash.replace('#','');
 
             const modalName = 'modal' + hash.charAt(0).toUpperCase() + hash.slice(1);
-                
+
             if (Certosa292 && Certosa292[modalName] && typeof Certosa292[modalName].show === 'function') {
                 Certosa292[modalName].show();
             }
